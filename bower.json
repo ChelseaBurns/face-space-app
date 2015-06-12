@@ -1,0 +1,24 @@
+{
+  "name": "face-space-app",
+  "version": "1.0.0",
+  "homepage": "https://github.com/ChelseaBurns/face-space-app",
+  "authors": [
+    "ChelseaBurns <co.designux@gmail.com>"
+  ],
+  "main": "index.jade",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "firebase": "~2.2.7",
+    "jquery": "~2.1.4",
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0"
+  }
+}

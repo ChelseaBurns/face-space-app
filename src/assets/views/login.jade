@@ -1,0 +1,12 @@
+h1.login Login to FaceSpace
+h3.login Don't have an account? Register now.
+
+form(name="loginForm")
+  .form-group
+    label.control-label Email:
+    input.form-control(type="email", ng-model="auth.email")
+  .form-group
+    label.control-label Password:
+    input.form-control(type="password", ng-model="auth.password")
+  button.btn.btn-success(ng-click="auth.register()") Register
+  button.btn.btn-primary(ng-click="auth.login()") Login

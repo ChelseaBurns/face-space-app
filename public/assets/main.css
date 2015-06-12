@@ -1,0 +1,43 @@
+img {
+  max-width: 100px;
+  max-height: 100px; }
+
+.person {
+  float: left;
+  margin: 20px; }
+
+body {
+  background-color: lightblue;
+  text-align: center; }
+
+nav {
+  background-color: lightyellow;
+  margin: 3% 0; }
+
+nav li {
+  display: inline;
+  text-decoration: none;
+  padding: 0 5%; }
+
+footer {
+  background-color: lightyellow; }
+
+.container {
+  background-color: white;
+  height: 600px;
+  margin: 5%; }
+
+.welcome {
+  background-color: lightyellow;
+  margin: 10% 15%;
+  padding: 5%; }
+
+form {
+  background-color: lightyellow;
+  width: 75%;
+  padding: 5%;
+  margin: 5% 10%; }
+
+.login {
+  text-align: left;
+  padding-left: 12%; }

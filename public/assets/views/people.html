@@ -1,0 +1,9 @@
+
+<h1>Face-Space App</h1>
+<h2>Search</h2>
+<input placeholder="Search" ng-model="query"/>
+<h2>Addresses</h2><a href="#/people/new" class="btn btn-primary">New Address</a>
+<div class="gallery">
+  <div ng-repeat="(id, person) in main.people | objToArr | orderBy:'name' | filter:query" class="person"><a href="#/people/{{person._id}}"><img ng-src="{{person.photo}}"/></a></div>
+</div>
+<div ng-include="'assets/views/modal.html'" onload="main.onModalLoad()"></div>

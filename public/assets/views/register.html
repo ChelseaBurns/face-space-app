@@ -1,0 +1,13 @@
+
+<h2 class="login">Register for FaceSpace</h2>
+<form name="registerForm">
+  <div class="form-group">
+    <label class="control-label">Email:</label>
+    <input type="email" ng-model="auth.email" class="form-control"/>
+  </div>
+  <div class="form-group">
+    <label class="control-label">Password:</label>
+    <input type="password" ng-model="auth.password" class="form-control"/>
+  </div>
+  <button ng-click="auth.register()" class="btn btn-success">Register</button>
+</form>
