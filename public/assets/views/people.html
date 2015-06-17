@@ -1,9 +1,8 @@
 
-<h1>Face-Space App</h1>
-<h2>Search</h2>
-<input placeholder="Search" ng-model="query"/>
-<h2>Addresses</h2><a href="#/people/new" class="btn btn-primary">New Address</a>
+<h1>Friend Spaces</h1>
 <div class="gallery">
-  <div ng-repeat="(id, person) in main.people | objToArr | orderBy:'name' | filter:query" class="person"><a href="#/people/{{person._id}}"><img ng-src="{{person.photo}}"/></a></div>
-</div>
+  <div ng-repeat="(id, person) in main.people | objToArr | orderBy:'name' | filter:query" class="person"><a href="#/people/{{person._id}}"><img ng-src="{{person.photo}}" class="imgGallery"/></a></div>
+</div><a href="#/people/new" class="btn btn-primary">Add Profile</a>
+<h2>Search Your Space</h2>
+<input placeholder="Search" ng-model="query"/>
 <div ng-include="'assets/views/modal.html'" onload="main.onModalLoad()"></div>

@@ -1,0 +1,23 @@
+
+<div id="modal" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button data-dismiss="modal" class="close"><span>&times;</span></button>
+        <h1>Add a Photo</h1>
+      </div>
+      <div class="modal-body">
+        <form name="photoModal" novalidate="novalidate">
+          <div ng-class="{'has-success': addressForm.t.$dirty &amp;&amp; addressForm.i.$valid , 'has-error': addressForm.t.$dirty &amp;&amp; addressForm.i.$invalid }" class="form-group">
+            <label class="control-label">Photo Url</label>
+            <input name="i" type="url" placeholder="http://google.com/img.jpg" ng-model="main.person.photo" required="required" class="form-control"/>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-danger">Cancel</button>
+        <button ng-click="addressForm.$valid &amp;&amp; main.saveAddress()" ng-disabled="addressForm.$invalid" class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</div>

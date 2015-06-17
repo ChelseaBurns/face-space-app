@@ -1,3 +1,17 @@
 
-<h1>{{main.person.name}}</h1><img ng-src="{{main.person.photo}}"/><a href="http://twitter.com/{{main.person.twitter}}" target="_blank">{{main.person.twitter}}</a><a href="tel:{{main.person.phone}}">{{main.person.phone}}</a><a href="#/people/{{main.id}}/edit" class="btn btn-primary">Edit</a><a ng-click="main.destroy()" class="btn btn-danger">Delete</a>
+<div class="row">
+  <div class="col-xs-1"></div>
+  <div class="col-xs-3 head-container"><img ng-src="{{main.person.photo}}" class="profile"/>
+    <h1>{{main.person.name}}</h1>
+    <div class="row info-container"></div><a href="http://twitter.com/{{main.person.twitter}}" target="_blank">{{main.person.twitter}}</a>
+    <div class="row info-container"></div><a href="tel:{{main.person.phone}}">{{main.person.phone}}
+      <div class="row userInfo"></div>
+      <div class="col-xs-12"><a href="#/people/{{main.id}}/edit" class="btn btn-primary profile-btn">Edit</a><a ng-click="main.destroy()" class="btn btn-danger profile-btn">Delete</a></div></a>
+  </div>
+  <div class="col-xs-7 userBio">
+    <h2>Bio Space</h2><a class="about">{{main.person.about}}</a>
+  </div>
+  <div class="col-xs-1"></div>
+</div>
 <div ng-include="'assets/views/modal.html'" onload="main.onModalLoad()"></div>
+<div ng-include="'assets/views/photoModal.html'" onload="main.onModalLoad()"></div>

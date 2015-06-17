@@ -24,6 +24,10 @@
             <label class="control-label">Photo Url</label>
             <input name="i" type="url" placeholder="http://google.com/img.jpg" ng-model="main.person.photo" required="required" class="form-control"/>
           </div>
+          <div ng-class="{'has-success': addressForm.n.$dirty &amp;&amp; main.person.name.length &gt; 1, 'has-error': addressForm.n.$dirty &amp;&amp; !main.person.name}" class="form-group">
+            <label class="control-label">About</label>
+            <textarea name="a" type="text" placeholder="Tell us what you're like" ng-model="main.person.about" required="required" class="form-control"></textarea>
+          </div>
         </form>
       </div>
       <div class="modal-footer">

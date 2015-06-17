@@ -1,0 +1,15 @@
+.modal.fade#modal
+  .modal-dialog
+    .modal-content
+      .modal-header
+        button.close(data-dismiss="modal")
+          span &times;
+        h1 Add a Photo
+      .modal-body
+        form(name="photoModal", novalidate)
+          .form-group(ng-class="{'has-success': addressForm.t.$dirty && addressForm.i.$valid , 'has-error': addressForm.t.$dirty && addressForm.i.$invalid }")
+            label.control-label Photo Url
+            input.form-control(name="i", type="url", placeholder="http://google.com/img.jpg", ng-model="main.person.photo", required)
+      .modal-footer
+        button.btn.btn-danger(data-dismiss="modal") Cancel
+        button.btn.btn-primary(ng-click="addressForm.$valid && main.saveAddress()", ng-disabled="addressForm.$invalid") Save

@@ -19,6 +19,9 @@
           .form-group(ng-class="{'has-success': addressForm.t.$dirty && addressForm.i.$valid , 'has-error': addressForm.t.$dirty && addressForm.i.$invalid }")
             label.control-label Photo Url
             input.form-control(name="i", type="url", placeholder="http://google.com/img.jpg", ng-model="main.person.photo", required)
+          .form-group(ng-class="{'has-success': addressForm.n.$dirty && main.person.name.length > 1, 'has-error': addressForm.n.$dirty && !main.person.name}")
+           label.control-label About
+           textarea.form-control(name="a", type="text", placeholder="Tell us what you're like", ng-model="main.person.about", required)
       .modal-footer
         button.btn.btn-danger(data-dismiss="modal") Cancel
         button.btn.btn-primary(ng-click="addressForm.$valid && main.saveAddress()", ng-disabled="addressForm.$invalid") Save

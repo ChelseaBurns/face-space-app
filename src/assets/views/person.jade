@@ -1,8 +1,20 @@
-h1 {{main.person.name}}
-img(ng-src="{{main.person.photo}}")
-a(href="http://twitter.com/{{main.person.twitter}}", target="_blank") {{main.person.twitter}}
-a(href="tel:{{main.person.phone}}") {{main.person.phone}}
-a.btn.btn-primary(href="#/people/{{main.id}}/edit") Edit
-a.btn.btn-danger(ng-click="main.destroy()") Delete
+.row
+	.col-xs-1
+	.col-xs-3.head-container
+		img.profile(ng-src="{{main.person.photo}}")
+		h1 {{main.person.name}}
+		.row.info-container
+		a(href="http://twitter.com/{{main.person.twitter}}", target="_blank") {{main.person.twitter}}
+		.row.info-container
+		a(href="tel:{{main.person.phone}}") {{main.person.phone}}
+			.row.userInfo
+			.col-xs-12
+				a.btn.btn-primary.profile-btn(href="#/people/{{main.id}}/edit") Edit
+				a.btn.btn-danger.profile-btn(ng-click="main.destroy()") Delete
+	.col-xs-7.userBio
+		h2 Bio Space
+		a.about {{main.person.about}}
+	.col-xs-1
 
 div(ng-include="'assets/views/modal.html'" onload="main.onModalLoad()")
+div(ng-include="'assets/views/photoModal.html'" onload="main.onModalLoad()")
